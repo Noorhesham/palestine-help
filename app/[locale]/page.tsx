@@ -13,18 +13,18 @@ export const MainContainer = ".main-container";
 
 export default function Home() {
   const t = useTranslations();
-  const [scrolling, setScrolling] = useState(false);
+  const [scrolling, setScrolling] = useState(true);
   console.log(scrolling);
   return (
     <main>
-      <Intro setScrolling={setScrolling} />
-
-      <div className="rest  relative hidden min-h-screen">
-        <ThirdScene />
-        <Shohadaa scrolling={scrolling} videoSrc="/movingold.mp4" text={t("heroes")} />
-        <Heroes />
-        <LayeredPinning scrolling={scrolling} />
-      </div>
+      {/* <Intro setScrolling={setScrolling} />
+     
+        <div className="rest  relative hidden min-h-screen">
+          <ThirdScene />
+          <Shohadaa scrolling={scrolling} videoSrc="/movingold.mp4" text={t("heroes")} />
+          <Heroes />
+        </div> */}
+      <LayeredPinning scrolling={scrolling} />
 
       {/* <PalestineMap/> */}
     </main>

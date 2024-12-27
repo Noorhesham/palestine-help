@@ -36,7 +36,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <NextIntlClientProvider messages={messages} locale={locale}>
         <body
-          className={`${locale === "ar" ? "rtl" : "ltr"} ${
+          className={` ${locale === "ar" ? "rtl" : "ltr"} ${
             locale === "ar" ? cairo.className : cinzel.className
           } antialiased`}
         >
