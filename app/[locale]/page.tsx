@@ -18,14 +18,14 @@ export default function Home() {
   return (
     <main>
       <Intro setScrolling={setScrolling} />
-      {
-        <div className="rest relative hidden min-h-screen">
-          <ThirdScene />
-          <Shohadaa videoSrc="/movingold.mp4" text={t("heroes")} />
-          <Heroes />
-          <LayeredPinning />
-        </div>
-      }
+
+      <div className="rest  relative hidden min-h-screen">
+        <ThirdScene />
+        <Shohadaa scrolling={scrolling} videoSrc="/movingold.mp4" text={t("heroes")} />
+        <Heroes />
+        <LayeredPinning scrolling={scrolling} />
+      </div>
+
       {/* <PalestineMap/> */}
     </main>
   );

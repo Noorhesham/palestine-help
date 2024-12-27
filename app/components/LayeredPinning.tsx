@@ -41,8 +41,9 @@ const history = [
     pargraph: `فلسطين اليوم ليست فقط قضية شعب يعيش تحت الاحتلال، إنها اختبار لإنسانية العالم بأسره. القهر الذي يتعرض له الفلسطينيون يوميًا يستدعي منا جميعًا موقفًا أخلاقيًا. يجب أن تكون فلسطين في قلوبنا وفي أفعالنا. فالصمت عن الظلم هو مشاركة فيه، والوقوف مع فلسطين هو وقوف مع الحق والعدالة.`,
   },
 ];
-const LayeredPinning = () => {
+const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
   useEffect(() => {
+    if (!scrolling) return;
     const panels = gsap.utils.toArray(".p");
     ScrollTrigger.create({
       trigger: ".panel",
@@ -98,7 +99,7 @@ const LayeredPinning = () => {
       .from(".p2", { yPercent: 100 })
       .from(".p3", { xPercent: -100 })
       .from(".p4", { xPercent: 100 });
-  }, []);
+  }, [scrolling]);
   return (
     <div>
       <div className="description panel relative h-screen blue">
@@ -123,7 +124,7 @@ const LayeredPinning = () => {
           <Image alt="section-1" src="/night.jpg" fill className=" object-cover w-full h-full" />
         </div>
         <div className=" relative z-20">
-          <h2  className=" text-7xl font-bold">{history[0].title}</h2>
+          <h2 className=" text-7xl font-bold">{history[0].title}</h2>
         </div>
       </section>
       <section className=" h-screen p flex items-center justify-center bg-orange-400 relative orange">TWO</section>

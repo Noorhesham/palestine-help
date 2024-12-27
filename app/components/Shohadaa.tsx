@@ -2,14 +2,16 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useEffect } from "react";
+import { MainContainer } from "../[locale]/page";
 
-const Shohadaa = ({ text, videoSrc }: { text: string; videoSrc: string }) => {
+const Shohadaa = ({ text, videoSrc, scrolling }: { text: string; videoSrc: string; scrolling?: boolean }) => {
   useEffect(() => {
+    if (!scrolling) return;
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: ".intro-hero",
-        scroller: ".main-container",
-        start: () => `top top`,
+        scroller: MainContainer,
+        start: `top top`,
         end: "+=1000",
         pin: true,
         pinSpacing: false,
@@ -25,7 +27,7 @@ const Shohadaa = ({ text, videoSrc }: { text: string; videoSrc: string }) => {
     });
 
     return () => ctx.revert();
-  }, []);
+  }, [scrolling]);
   return (
     <section className="intro-hero w-full relative flex items-center justify-center h-screen bg-black">
       {/* Video */}

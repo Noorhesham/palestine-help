@@ -19,8 +19,8 @@ const useLocoScroll = () => {
       el: scrollEl,
       touchMultiplier: 2,
       smooth: window.innerWidth >= 768, // Disable smooth scrolling on mobile
-
       multiplier: 1.5,
+      
    
     });
 
