@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
+
+.font-cairo {
+  font-family: "Cairo", sans-serif;
+}
+
+.font-cinzel {
+  font-family: "Cinzel", serif;
+}
+
+html {
+  font-family: theeme("fontFamily.cairo"); /* Default font */
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  outline: none;
+}
+g:focus {
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); /* Custom focus effect */
+  outline: none; /* Remove default outline */
+}
+path {
+  outline: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.huge-font {
+  font-size: clamp(3rem, 10vw, 8rem);
+}
+@layer utilities {
+  .animated-title {
+    @apply flex flex-col gap-1  uppercase leading-[.8];
+  }
+  .animated-word {
+    @apply font-black opacity-0;
+    perspective: 600px;
+    transform: translateY(-20x);
+    /* transform:  rotateY(20deg) rotateX(10deg); */
+    /* transform-origin: 50% 50% -150px !important; */
+    will-change: opacity, transform;
+  }
+}
+/* .main-container {
+  padding-bottom: 56%;
+} */
