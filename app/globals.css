@@ -15,7 +15,9 @@
 html {
   font-family: theeme("fontFamily.cairo"); /* Default font */
 }
-
+.gradient {
+  background: linear-gradient(0deg, rgb(0 0 0 / 100%) 10%, rgb(0 0 0 / 70%) 30%, rgb(0 0 0 / 20%) 50%);
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;

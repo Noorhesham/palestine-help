@@ -16,7 +16,7 @@ const PalestineMap = () => {
   return (
     <div
       style={{ textAlign: "center", fontFamily: "Arial, sans-serif" }}
-      className=" outline-none w-full relative min-h-[600px]"
+      className=" outline-none w-full relative min-h-[400px]"
     >
       <div
         className=""

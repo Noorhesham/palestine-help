@@ -13,6 +13,8 @@
     "@vis.gl/react-google-maps": "^1.4.2",
     "gsap": "^3.12.5",
     "locomotive-scroll": "^4.1.4",
+    "lottie-react": "^2.4.0",
+    "lucide-react": "^0.469.0",
     "next": "15.1.2",
     "next-intl": "^3.26.3",
     "palestine": "file:",
@@ -20,7 +22,8 @@
     "react-dom": "^19.0.0",
     "react-zoom-pan-pinch": "^3.6.1",
     "sass": "^1.83.0",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
     "@types/node": "^20",

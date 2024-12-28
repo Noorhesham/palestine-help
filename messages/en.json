@@ -7,5 +7,40 @@
     "text": "For decades, the Palestinian people have endured unimaginable hardships under oppression. Their pain and resilience are a testament to their unyielding spirit, yet their struggles are heartbreaking and bring tears to our eyes.",
     "text2": "Endless Suffering<br/> A Cry for Justice"
   },
-  "heroes": "Heroes"
+  "heroes": "Heroes",
+
+  "history": {
+    "0": {
+      "title": "Palestine: Land of Prophets and Sanctities",
+      "paragraph": "Palestine is not just a piece of land; it is the home of prophets and the cradle of divine messages. From Jerusalem, where Prophet Muhammad ﷺ ascended to the heavens, to Bethlehem, where Christ was born, the land of Palestine tells sacred stories of human history. For centuries, Palestine has symbolized unity and spirituality, where the spirits of three religions harmoniously intertwine. But this peace, long-lived, is now a memory under the weight of occupation."
+    },
+    "1": {
+      "title": "The Balfour Declaration: Beginning of the Catastrophe",
+      "paragraph": "In 1917, Britain issued the infamous Balfour Declaration, planting the seeds of occupation in the land of Palestine. This declaration marked the beginning of a series of events that forever altered the country. Millions of Palestinians were forcibly displaced from their homes, replaced by a colonial entity built on oppression and segregation."
+    },
+    "2": {
+      "title": "The 1948 Nakba: Beginning of Suffering",
+      "paragraph": "The year 1948 marked the beginning of the Palestinian wound that continues to bleed today. Over 700,000 Palestinians were forcibly expelled from their homes under the might of Israeli weaponry and oppression. Entire cities were destroyed, villages turned to ruins, and the dreams of generations shattered on the rocks of Nakba. Since then, the word refugee has become an inseparable part of Palestinian identity, with generations born in camps carrying the key to their homeland they were forced to leave."
+    },
+    "3": {
+      "title": "Military Occupation: Israel's Machine of Destruction",
+      "paragraph": "Israel occupied the West Bank and Gaza Strip, deploying a ruthless military apparatus. From demolishing homes and uprooting trees to building illegal settlements, Israel continues to impose harsh realities on the ground. Military checkpoints, the separation wall, and mass detentions are tools used to humiliate Palestinians and strip them of their basic rights."
+    },
+    "4": {
+      "title": "Gaza: The Symbol of Resilience",
+      "paragraph": "Despite a blockade strangling Gaza for over 15 years and repeated bombings that have turned the city to rubble, Gaza stands tall. Its people, with their dignity and belief in their just cause, continue to live under unimaginable conditions."
+    },
+    "5": {
+      "title": "Jerusalem: The Heart of the Conflict",
+      "paragraph": "Jerusalem, the city that houses the Dome of the Rock and Al-Aqsa Mosque, is under constant Judaization attempts aimed at erasing its Arab and Islamic identity. From displacing its original residents to repeated settler invasions, Israel is trying to change the features of the holy city. Yet Jerusalem stands firm, with its streets, stones, and people refusing to relinquish their identity despite everything."
+    },
+    "6": {
+      "title": "A City Under Siege, Yet Unbroken",
+      "paragraph": "Gaza, living under a suffocating siege for more than 15 years, has become a symbol of resilience and resistance. Despite repeated bombings and a lack of food and medicine, Gaza’s inhabitants continue their lives with unparalleled courage."
+    },
+    "7": {
+      "title": "A Message to the World: Palestine Calls You",
+      "paragraph": "Palestine today is not just the cause of a people living under occupation; it is a test of the world's humanity. The daily oppression faced by Palestinians demands a moral stance from all of us. Palestine must be in our hearts and our actions. Silence in the face of injustice is complicity, and standing with Palestine is standing with truth and justice."
+    }
+  }
 }

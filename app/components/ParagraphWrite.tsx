@@ -1,4 +1,14 @@
-const ParagraphWrite = ({ text, className }: { text: string; className?: string }) => {
+const ParagraphWrite = ({
+  text,
+  className,
+  height,
+  visible,
+}: {
+  text: string;
+  className?: string;
+  height?: string;
+  visible?: boolean;
+}) => {
   return (
     <p className={`  ${className || ""} max-w-3xl text-xl text-center`}>
       {text.split("").map((char, index) =>
@@ -7,7 +17,10 @@ const ParagraphWrite = ({ text, className }: { text: string; className?: string 
             {char}
           </span>
         ) : (
-          <span key={index} className="opacity-0  translate-y-1">
+          <span
+            key={index}
+            className={` ${height && `  ${height}`} ${visible ? " opacity-100" : "opacity-0"}  translate-y-5`}
+          >
             {char}
           </span>
         )
