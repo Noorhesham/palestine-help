@@ -10,7 +10,6 @@ const PanelMultiSide = () => {
           trigger: "#container",
           scroller: ".main-container",
           pin: true,
-          markers: true,
           scrub: true,
           end: "+=4000",
           anticipatePin: 1,

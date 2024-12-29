@@ -33,7 +33,7 @@ const Nakba = ({
     return () => ctx.revert();
   }, [assignAnimations]);
   return (
-    <section className=" h-screen nakba-section p flex items-center justify-center  relative ">
+    <section className=" h-screen  lg:flex-row flex-col nakba-section p flex items-center justify-center  relative ">
       <div className=" absolute inset-0 w-full h-full">
         <Image src={"/296045.jpg"} alt="section-1" fill className=" object-cover w-full h-full grayscale	" />
       </div>

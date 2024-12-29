@@ -80,7 +80,7 @@ const AnimatedTitle = ({
       {text.split("<br/>").map((line, index) => (
         <div
           key={index}
-          className="flex max-w-full md:flex-row flex-col items-center lg:my-0 my-4 flex-wrap lgap-4 px-10 md:gap-3"
+          className="flex max-w-full md:flex-row flex-col items-center lg:my-0 my-4 flex-wrap gap-4 px-10 md:gap-3"
         >
           {line.split(" ").map((word, i) =>
             locale === "en" ? (

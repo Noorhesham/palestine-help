@@ -17,8 +17,6 @@ const Shohadaa = ({ text, videoSrc, scrolling }: { text: string; videoSrc: strin
         pinSpacing: false,
         scrub: true,
         invalidateOnRefresh: true,
-
-        markers: true,
         animation: gsap
           .timeline()
           .fromTo(".title2", { scale: 1 }, { y: 100, scale: 3.8, opacity: 1 })

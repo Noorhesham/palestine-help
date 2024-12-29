@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import React, { useEffect } from "react";
 import { MainContainer } from "../[locale]/page";
-import Image from "next/image";
 
 const ThirdScene = () => {
   useEffect(() => {
@@ -47,25 +46,25 @@ const ThirdScene = () => {
         <img src="/smoke.png" alt="nakba3" />
       </div>
 
-      <div className=" z-30 cloud absolute right-[-50%] -top-44 w-full h-full">
+      <div className=" z-30 cloud absolute right-1/2 lg:right-[-50%] -top-44 w-full h-full">
         <img src="/smoke.png" alt="nakba3" />
       </div>
-      <div className=" z-30 cloud absolute right-[-50%] -bottom-52 w-full h-full">
+      <div className=" z-30 cloud absolute right-1/2 lg:right-[-50%] -bottom-52 w-full h-full">
         <img src="/smoke.png" alt="nakba3" />
       </div>
       <div className=" z-30 cloud absolute  -left-40 -bottom-52 w-full h-full">
         <img src="/smoke.png" alt="nakba3" />
       </div>
-      <div className=" absolute soldier z-20 rotate-12 top-1/2 left-44 w-80">
+      <div className=" absolute soldier z-20 rotate-12 top-1/2 left-20 lg:left-44 w-80">
         <img src="/soldiers.png" className="" />
       </div>
-      <div className="absolute soldier z-20 left-44 w-80">
+      <div className="absolute soldier z-20 left-20 lg:left-44 w-80">
         <img src="/soldiers.png" className=" " />
       </div>
-      <div className="absolute soldier2 z-20 right-44 rotate-180 w-80">
+      <div className="absolute soldier2 z-20 right-20 lg:right-44 rotate-180 w-80">
         <img src="/soldiers.png" className=" " />
       </div>
-      <div className="absolute soldier2 z-20 right-44 bottom-40 rotate-180 w-80">
+      <div className="absolute soldier2 z-20 right-20 lg:right-44 bottom-40 rotate-180 w-80">
         <img src="/soldiers.png" className=" " />
       </div>
       <div className=" z-30 w-44  kid absolute top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2">

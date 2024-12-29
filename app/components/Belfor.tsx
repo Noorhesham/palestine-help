@@ -14,7 +14,6 @@ const Belfor = ({ locale, assignAnimations }: { locale: string; assignAnimations
             start: "top 50%",
             end: "50% 20%",
             scrub: true,
-            markers: true,
           },
         })
         .from(".img-belfor", { xPercent: 70 }, "<0.5");

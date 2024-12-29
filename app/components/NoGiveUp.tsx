@@ -40,10 +40,10 @@ const NoGiveUp = ({
   }, [assignAnimations]);
   return (
     <>
-      <div className="  bottom-0 absolute right-0 max-w-lg text-gray-800 font-semibold yellow bg-yellow-200 py-4 px-8">
+      <div className="  bottom-0 lg:block hidden absolute right-0 max-w-lg text-gray-800 font-semibold yellow bg-yellow-200 py-4 px-8">
         {history[5].paragraph}
       </div>
-      <div className=" h-full flex w-1/2 flex-col items-center black-overlay  bg-black/40">
+      <div className=" h-full flex w-full lg:w-1/2 flex-col items-center black-overlay  bg-black/40">
         <div className="flex flex-col z-20 items-center my-auto">
           <Label
             backgroundColor=" label-4  bg-transparent"
@@ -57,7 +57,7 @@ const NoGiveUp = ({
           />
         </div>
       </div>
-      <span className="  text-slate-800 absolute z-10 top-44 right-20 font-extrabold text-7xl giveup -rotate-90">
+      <span className="lg:block hidden  text-slate-800 absolute z-10 top-44 right-20 font-extrabold text-7xl giveup -rotate-90">
         لا نستسلم
       </span>
       <div className=" free w-full h-full    absolute -bottom-14">

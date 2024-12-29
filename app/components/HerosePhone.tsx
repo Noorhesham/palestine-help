@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useRef, useState, useEffect } from "react";
 import ParagraphWrite from "./ParagraphWrite";
 import { useLocale } from "next-intl";
+import SwiperCards from "./SwiperCards";
 const imagePaths = [
   {
     img: "/2 (1).jpg",
@@ -94,88 +95,47 @@ const imagePaths = [
 
 const HeroesPhone = () => {
   const slideShow = useRef<HTMLDivElement>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const touchStartX = useRef<number | null>(null);
   const locale = useLocale();
-  // Function to handle touch start
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-
-  // Function to handle touch end and calculate direction
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-    const touchEndX = e.changedTouches[0].clientX;
-    const deltaX = touchEndX - touchStartX.current;
-
-    if (deltaX > 50 && currentIndex > 0) {
-      // Swipe Right
-      setCurrentIndex(currentIndex - 1);
-    } else if (deltaX < -50 && currentIndex < imagePaths.length - 1) {
-      // Swipe Left
-      setCurrentIndex(currentIndex + 1);
-    }
-    touchStartX.current = null;
-  };
-
-  // Adjust translateX for the slideshow
-  useEffect(() => {
-    if (slideShow.current) {
-      slideShow.current.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-  }, [currentIndex]);
 
   return (
     <section className="heroes w-full relative flex items-center justify-center min-h-screen">
-      {/* Background overlay and video */}
       <div className="absolute inset-0 bg-black/40 w-full h-full"></div>
       <video src="/movingold.mp4" autoPlay loop muted className="absolute inset-0 w-full h-full object-cover"></video>
 
-      {/* Slider */}
-      <div
-        ref={slideShow}
-        className="flex w-full transition-transform duration-500 ease-in-out"
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-      >
-        {imagePaths.map((item, index) => (
-          <div key={index} className="flex  flex-col slide w-full items-center">
-            <div
-              style={{ zIndex: imagePaths.length - index, marginTop: -index * 50 }}
-              className={`  w-64 rounded-t-xl   overflow-hidden  h-64 aspect-square relative `} // mt increases with each index
-            >
-              <Image className="object-cover" src={item.img} fill alt={`shahid ${index + 1}`} />
-            </div>
-            <div className=" opacity-0 py-2 px-4 flex flex-col rounded-b-xl  items-center bg-black/50 h-0 para">
-              <h2
-                className={`${
-                  locale === "ar" && "flex-row-reverse "
-                } text-center text-main text-base items-start flex font-bold`}
-              >
-                {item.title[locale]}
-              </h2>
-              <ParagraphWrite
-                className="flex-grow      text-left !text-[12px] leading-4 w-auto max-w-2xl"
-                text={item.paragraph[locale]}
-              />
-              <span className=" text-[8px]  p-2 text-nowrap  font-semibold  text-red-400 self-end  ">
-                ({item.date})
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Controls */}
-      <div className="absolute bottom-4 flex gap-4">
-        {imagePaths.map((_, index) => (
-          <button
-            key={index}
-            className={`w-4 h-4 rounded-full ${index === currentIndex ? "bg-white" : "bg-gray-500"}`}
-            onClick={() => setCurrentIndex(index)}
-          ></button>
-        ))}
-      </div>
+   
+      <SwiperCards
+        slidesPerView={1}
+        items={imagePaths.map((item, index) => {
+          return {
+            card: (
+              <div key={index} className="flex   px-5  flex-col slide w-full items-center">
+                <div
+                  className={`  w-full rounded-t-xl   overflow-hidden  h-64 aspect-square relative `} // mt increases with each index
+                >
+                  <Image className="object-cover" src={item.img} fill alt={`shahid ${index + 1}`} />
+                </div>
+                <div className="  py-2 px-4 flex flex-col rounded-b-xl  items-center bg-black/50  para">
+                  <h2
+                    className={`${
+                      locale === "ar" && "flex-row-reverse "
+                    } text-center text-main text-base items-start flex font-bold`}
+                  >
+                    {item.title[locale]}
+                  </h2>
+                  <ParagraphWrite
+                    visible
+                    className="flex-grow      text-left !text-[12px] leading-4 w-auto max-w-2xl"
+                    text={item.paragraph[locale]}
+                  />
+                  <span className=" text-[8px]  p-2 text-nowrap  font-semibold  text-red-400 self-end  ">
+                    ({item.date})
+                  </span>
+                </div>
+              </div>
+            ),
+          };
+        })}
+      />
     </section>
   );
 };

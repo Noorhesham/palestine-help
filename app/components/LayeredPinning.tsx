@@ -81,7 +81,7 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
             pin: true,
             start: "top top",
             end: "+=800",
-            animation: animationTl,
+            animation: animationTl,toggleActions: "play none none reverse",
           })
         : ScrollTrigger.create({
             trigger: panel,
@@ -101,7 +101,6 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
           scrub: true,
           end: "+=4900",
           start: "top top",
-          markers: true,
         },
       })
       .to(".giveup", { y: -400 })

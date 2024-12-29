@@ -20,7 +20,7 @@ const FirstScene = ({ text, text2, setScrolling }: { text: string; text2: string
       >
         <AnimatedTitle setScrolling={setScrolling}
           className={` text-main huge-font !text-center flex flex-col items-center ${
-            locale === "ar" ? "!gap-20" : "gap-5"
+            locale === "ar" ? " gap-5 !lg:gap-20" : "gap-5"
           }  font-bold`}
           text={text}
         />

@@ -132,11 +132,8 @@ const Heroes = () => {
           pin: true,
           start: () => `top top`,
           end: () => `+=${getScrollAmout() * -10}`,
-          markers: true,
           invalidateOnRefresh: true,
-
           scrub: true,
-
           animation: xAnimation,
           onLeave: () => {
             gsap.to(slideShow.current, { opacity: 0, y: 200 });
@@ -167,7 +164,6 @@ const Heroes = () => {
             containerAnimation: xAnimation,
             start: `${index * 8}% 40%`,
             end: "+=200",
-            markers: true,
             onEnter: () => {
               gsap.utils.toArray(".slide").forEach((otherSlide: any) => {
                 if (otherSlide !== slide) {

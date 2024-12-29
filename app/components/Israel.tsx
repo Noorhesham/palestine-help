@@ -35,7 +35,7 @@ const Israel = ({
       <div className=" w-full h-44 skulls z-20   absolute bottom-0">
         <Image src={"/grave.png"} fill className=" object-cover" alt="grave" />
       </div>
-      <div className=" flex flex-col z-30 gap-4 absolute left-1/2 -translate-x-1/2">
+      <div className=" flex flex-col z-30 gap-4 absolute w-full left-1/2 -translate-x-1/2">
         <Label
           className={"   !text-blue-600"}
           backgroundColor=" bg-transparent"
