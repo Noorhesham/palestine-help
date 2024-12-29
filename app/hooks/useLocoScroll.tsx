@@ -17,11 +17,12 @@ const useLocoScroll = () => {
 
     const locoScrollInstance = new LocomotiveScroll({
       el: scrollEl,
-      touchMultiplier: 2,
-      smooth: window.innerWidth >= 768, // Disable smooth scrolling on mobile
+      smooth: true,
+      //@ts-ignore
+      mobile: {
+        smooth: true,
+      },
       multiplier: 1.5,
-      
-   
     });
 
     locoScrollInstance.on("scroll", ScrollTrigger.update);
