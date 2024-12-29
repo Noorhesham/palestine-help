@@ -5,12 +5,13 @@ import LayeredPinning from "../components/LayeredPinning";
 import Shohadaa from "../components/Shohadaa";
 import ThirdScene from "../components/ThirdScene";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import VideoGallery from "../components/VideoGallery";
 
 import Footer from "../components/Footer";
 import { useLoader } from "../context/LoaderContext";
 import Image from "next/image";
+import { ScrollTrigger } from "gsap/all";
 export const MainContainer = ".main-container";
 // روح الروح
 export default function Home() {
@@ -18,6 +19,9 @@ export default function Home() {
   const t = useTranslations();
   const [scrolling, setScrolling] = useState(false);
   const { isLoading } = useLoader();
+  useEffect(() => {
+    ScrollTrigger.refresh();
+  }, [scrolling]);
   if (isLoading) {
     return (
       <section className="flex justify-center items-center w-full h-screen bg-black">
