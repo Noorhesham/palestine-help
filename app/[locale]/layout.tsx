@@ -6,6 +6,7 @@ import "locomotive-scroll/src/locomotive-scroll.scss";
 import { getMessages } from "next-intl/server";
 import Language from "../components/Language";
 import { NextIntlClientProvider } from "next-intl";
+import { LoaderProvider } from "../context/LoaderContext";
 
 const cairo = Cairo({
   subsets: ["latin"],
@@ -40,10 +41,12 @@ export default async function RootLayout({
             locale === "ar" ? cairo.className : cinzel.className
           } antialiased`}
         >
+          <LoaderProvider>
           <Language />{" "}
-          <SmoothScrollProvider>
-            <div className={`main-container overflow-hidden `}>{children}</div>
-          </SmoothScrollProvider>
+            <SmoothScrollProvider>
+              <div className={`main-container overflow-hidden `}>{children}</div>
+            </SmoothScrollProvider>
+          </LoaderProvider>
         </body>
       </NextIntlClientProvider>
     </html>

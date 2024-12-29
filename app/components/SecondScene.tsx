@@ -2,12 +2,19 @@ import Image from "next/image";
 import React from "react";
 import ParagraphWrite from "./ParagraphWrite";
 import { useLocale } from "next-intl";
+import { useLoader } from "../context/LoaderContext";
 
 const SecondScene = ({ text, text2 }: { text: string; text2: string }) => {
   const locale = useLocale();
+  const { setLoadedVideos } = useLoader();
+
   return (
     <div className=" relative z-20 overflow-hidden   h-screen second">
       <video
+        onLoadedData={() => {
+          console.log("loaded");
+          setLoadedVideos((prev) => prev + 1);
+        }} preload="auto"
         src="/palestine.mp4"
         muted
         className=" scale-125 opacity-0 palestine-video absolute inset-0 w-full h-full object-cover"
@@ -22,16 +29,18 @@ const SecondScene = ({ text, text2 }: { text: string; text2: string }) => {
         <div className=" flex-col flex w-full lg:w-[70%] h-full lg:pt-0 pt-20   flex-grow relative">
           {text2.split("<br/>").map((line, index) => (
             <div key={index} className="overflow-hidden h-12 md:h-16 lg:h-24 flex max-w-full  gap-2 lg:px-10">
-              {locale === "ar"
-                ? <span className=" text-main w-fit relative  text-[5.5vw]">{line}</span>
-                : line.split("").map((char, index) => (
-                    <span
-                      key={index}
-                      className={` ${char === " " ? "inline-block w-5" : ""} text-main w-fit relative  text-[5.5vw]`}
-                    >
-                      {char === " " ? "\u00A0" : char}
-                    </span>
-                  ))}
+              {locale === "ar" ? (
+                <span className=" text-main w-fit relative  text-[5.5vw]">{line}</span>
+              ) : (
+                line.split("").map((char, index) => (
+                  <span
+                    key={index}
+                    className={` ${char === " " ? "inline-block w-5" : ""} text-main w-fit relative  text-[5.5vw]`}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </span>
+                ))
+              )}
             </div>
           ))}
           <span className=" text-7xl mt-5 flex gap-2 text-red-800  ">
