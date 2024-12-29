@@ -14,6 +14,8 @@ const Shohadaa = ({ text, videoSrc, scrolling }: { text: string; videoSrc: strin
         start: `top top`,
         end: "+=1000",
         pin: true,
+        anticipatePin: 1,
+
         pinSpacing: false,
         scrub: true,
         invalidateOnRefresh: true,

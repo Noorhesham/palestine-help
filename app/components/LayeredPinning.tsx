@@ -61,6 +61,7 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
       trigger: ".panel",
       scroller: ".main-container",
       pin: true,
+      anticipatePin: 1,
       end: `+=800`,
       scrub: true,
       animation: gsap.timeline().fromTo(".title3", { scale: 1 }, { y: 100, scale: 4.4, opacity: 1 }),
@@ -79,6 +80,8 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
             trigger: panel,
             scroller: ".main-container",
             pin: true,
+            anticipatePin: 1,
+
             start: "top top",
             end: "+=800",
             animation: animationTl,
@@ -88,6 +91,8 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
             trigger: panel,
             scroller: ".main-container",
             pin: true,
+            anticipatePin: 1,
+
             start: "top top",
             end: "+=800",
           });
@@ -100,6 +105,8 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
           trigger: ".pl",
           scroller: ".main-container",
           pin: true,
+          anticipatePin: 1,
+
           scrub: true,
           end: "+=4900",
           start: "top top",

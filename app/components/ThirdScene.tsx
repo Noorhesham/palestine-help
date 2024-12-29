@@ -13,6 +13,8 @@ const ThirdScene = () => {
         pin: true,
         start: "top top",
         end: "+=1800",
+        anticipatePin: 1,
+
         scrub: true,
         invalidateOnRefresh: true,
         animation: gsap

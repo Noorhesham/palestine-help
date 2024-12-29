@@ -130,6 +130,7 @@ const Heroes = () => {
           trigger: ".heroes",
           scroller: MainContainer,
           pin: true,
+          anticipatePin: 1,
           start: () => `top top`,
           end: () => `+=${getScrollAmout() * -10}`,
           invalidateOnRefresh: true,
