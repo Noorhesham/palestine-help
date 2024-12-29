@@ -17,6 +17,10 @@ const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
 });
+export async function generateStaticParams() {
+  const locales = ["en", "ar"];
+  return locales.map((locale) => ({ locale }));
+}
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -42,7 +46,7 @@ export default async function RootLayout({
           } antialiased`}
         >
           <LoaderProvider>
-          <Language />{" "}
+            <Language />{" "}
             <SmoothScrollProvider>
               <div className={`main-container overflow-hidden `}>{children}</div>
             </SmoothScrollProvider>
