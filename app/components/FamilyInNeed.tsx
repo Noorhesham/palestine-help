@@ -5,11 +5,11 @@ import React from "react";
 const FamilyInNeed = () => {
   return (
     <section className="p5 bg-black/40  w-full h-screen z-50 flex items-center justify-center   top-0 absolute">
-      <div className=" flex bg-yellow-50 px-5 w-[70%] rounded-2xl overflow-hidden flex-col gap-4">
-        <div className=" h-64 w-full relative ">
+      <div className=" flex bg-yellow-50 px-5 w-full lg:w-[70%] rounded-2xl overflow-hidden flex-col gap-4">
+        <div className=" h-44 lg:h-64 w-full relative ">
           <Image src={"/save.webp"} alt="family" fill className={" object-cover"} />
         </div>
-        <h2 className="section-title text-3xl font-bold text-center text-gray-800 mt-8 mb-4">A Cry for Help</h2>
+        <h2 className="section-title text-3xl font-bold text-center text-gray-800 mt-2 lg:mt-8 mb-4">A Cry for Help</h2>
 
         {/* Description */}
         <p className="description text-lg text-gray-700 leading-relaxed tracking-wide">

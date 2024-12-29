@@ -32,7 +32,7 @@ const News = () => {  const slides = [
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className=" w-full h-screen p3 z-40 flex flex-col items-center py-10 px-20 justify-center   top-0 absolute  "
+      className=" w-full h-screen p3 z-40 flex flex-col items-center py-10  px-2 lg:px-20 justify-center   top-0 absolute  "
     >
       {" "}
       <div className=" flex flex-col gap-4  items-center"></div>

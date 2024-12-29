@@ -108,7 +108,7 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
       .from(".p2", { yPercent: 100 })
       .from(".p3", { xPercent: -100 })
       .from(".p4", { xPercent: 100 })
-      .from(".p5", { yPercent: 100 });
+      .from(".p5", { yPercent:window.innerWidth < 768 ? 150 : 100 });
   }, [scrolling]);
   return (
     <div>
