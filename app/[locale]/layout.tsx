@@ -3,7 +3,7 @@ import { Cairo, Cinzel } from "next/font/google";
 import "../globals.css";
 import { SmoothScrollProvider } from "../context/ScrollProviderContext";
 import "locomotive-scroll/src/locomotive-scroll.scss";
-import { getMessages } from "next-intl/server";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import Language from "../components/Language";
 import { NextIntlClientProvider } from "next-intl";
 import { LoaderProvider } from "../context/LoaderContext";
@@ -35,6 +35,8 @@ export default async function RootLayout({
   params: { locale: string };
 }>) {
   const { locale } = await (params as any);
+  unstable_setRequestLocale(locale);
+
   const messages = await getMessages();
   console.log(locale);
   return (
