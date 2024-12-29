@@ -26,11 +26,11 @@ const SecondScene = ({ text, text2 }: { text: string; text2: string }) => {
         className="flex w-full  gap-10 md:flex-row flex-col  px-5 lg:px-20 justify-between opacity-0   lg:py-10 left-10
        lg:left-44 top-20 intro2"
       >
-        <div className=" flex-col flex w-full lg:w-[70%] h-full lg:pt-0 pt-20   flex-grow relative">
+        <div className=" flex-col flex w-full  h-full lg:pt-0 pt-20   flex-grow relative">
           {text2.split("<br/>").map((line, index) => (
             <div key={index} className="overflow-hidden h-12 md:h-16 lg:h-24 flex max-w-full  gap-2 lg:px-10">
               {locale === "ar" ? (
-                <span className=" text-main w-fit relative  text-[5.5vw]">{line}</span>
+                <span className=" text-main w-fit relative  text-4xl lg:text-[2.5vw]">{line}</span>
               ) : (
                 line.split("").map((char, index) => (
                   <span
