@@ -81,7 +81,8 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
             pin: true,
             start: "top top",
             end: "+=800",
-            animation: animationTl,toggleActions: "play none none reverse",
+            animation: animationTl,
+            toggleActions: "play none none reverse",
           })
         : ScrollTrigger.create({
             trigger: panel,
@@ -92,6 +93,7 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
           });
     });
     setAssignAnimations(true);
+    ScrollTrigger.refresh();
     gsap
       .timeline({
         scrollTrigger: {
@@ -108,7 +110,7 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
       .from(".p2", { yPercent: 100 })
       .from(".p3", { xPercent: -100 })
       .from(".p4", { xPercent: 100 })
-      .from(".p5", { yPercent:window.innerWidth < 768 ? 150 : 100 });
+      .from(".p5", { yPercent: window.innerWidth < 768 ? 150 : 100 });
   }, [scrolling]);
   return (
     <div>
