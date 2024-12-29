@@ -24,20 +24,17 @@ const useLocoScroll = () => {
       },
       multiplier: 1.5,
     });
+    setLocoScroll(locoScrollInstance);
 
     locoScrollInstance.on("scroll", ScrollTrigger.update);
     locoScrollInstance.on("scroll", (args) => setProgress(args.scroll.y));
 
     ScrollTrigger.scrollerProxy(scrollEl, {
       scrollTop(value) {
-        return arguments.length
-          ? locoScrollInstance.scrollTo(value, 0, 0)
-          : locoScrollInstance.scroll.instance.scroll.y;
+        return arguments.length ? locoScrollInstance.scrollTo(value, 0) : locoScrollInstance.scroll.instance.scroll.y;
       },
       scrollLeft(value) {
-        return arguments.length
-          ? locoScrollInstance.scrollTo(value, 0, 0)
-          : locoScrollInstance.scroll.instance.scroll.x;
+        return arguments.length ? locoScrollInstance.scrollTo(value, 0) : locoScrollInstance.scroll.instance.scroll.x;
       },
       getBoundingClientRect() {
         return {
@@ -47,10 +44,10 @@ const useLocoScroll = () => {
           height: window.innerHeight,
         };
       },
-      pinType: document.querySelector(".main-container").style.transform ? "transform" : "fixed",
+      pinType: scrollEl?.style.transform ? "transform" : "fixed",
     });
 
-    setLocoScroll(locoScrollInstance);
+
 
     const lsUpdate = () => locoScrollInstance.update();
     // if (window.innerWidth < 768) ScrollTrigger.normalizeScroll(true);
