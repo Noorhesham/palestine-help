@@ -3,6 +3,7 @@ import Label from "./Label";
 import ParagraphWrite from "./ParagraphWrite";
 import Image from "next/image";
 import gsap from "gsap";
+import { useTranslations } from "next-intl";
 
 const NoGiveUp = ({
   history,
@@ -11,6 +12,7 @@ const NoGiveUp = ({
   history: { title: string; paragraph: string }[];
   assignAnimations: any;
 }) => {
+  const t = useTranslations();
   useEffect(() => {
     if (!assignAnimations) return;
     const ctx = gsap.context(() => {
@@ -58,7 +60,7 @@ const NoGiveUp = ({
         </div>
       </div>
       <span className="lg:block hidden  text-slate-800 absolute z-10 top-44 right-20 font-extrabold text-7xl giveup -rotate-90">
-        لا نستسلم
+        {t("giveup")}
       </span>
       <div className=" free w-full h-full    absolute -bottom-14">
         <Image src={"/free.png"} fill className=" object-contain" alt="grave" />

@@ -69,7 +69,6 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
 
     const animationTl = gsap
       .timeline()
-      .from(".char", { stagger: { amount: 0.1, from: "random" }, opacity: 0 })
       .from(".text-bg", { width: 0, stagger: { amount: 0.1, from: "random" }, ease: "none" }, "<")
       .to(".paragraph3", { opacity: 1 }, "<")
       .to(".paragraph3 span", { y: 0, stagger: { amount: 0.1, from: "random" }, opacity: 1, ease: "none" }, "<");
@@ -131,7 +130,7 @@ const LayeredPinning = ({ scrolling }: { scrolling?: boolean }) => {
               mixBlendMode: "normal",
             }}
           >
-            WHAT IS THE HISTORY !?
+            {t("title")}
           </h2>
         </div>
       </div>

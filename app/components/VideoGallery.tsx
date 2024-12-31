@@ -4,6 +4,7 @@ import "../VideoGallery.css"; // Add your styling here
 import Label from "./Label";
 
 const rows = [
+  //[[1,2,3,4],[1,2,3],[1,2,3,4,5]]
   { id: 1, count: 4, videoIds: ["kZ7xspnu2fc", "w0PPnHeed-4", "dONVyRmpcIU", "QnTDQncyMd0"] },
   { id: 2, count: 3, videoIds: ["BJe1iuHSFS4", "IdVrn09Y1xU", "OSRCKPHt8pg", "DIwfL_u-w0Y"] },
   { id: 3, count: 5, videoIds: ["0QFMOJnloCk", "DHbVei8Zj9w", "_HkO6ny1e4E", "nMxmjLQEo1E"] },
@@ -19,12 +20,12 @@ const VideoGallery: React.FC = () => {
     if (!container) return;
 
     const { clientX, clientY, currentTarget } = e;
-    const { left, top, width, height } = currentTarget.getBoundingClientRect();
+    const { width, height } = currentTarget.getBoundingClientRect();
     const centerX = width / 4;
     const centerY = height / 4;
-
-    const deltaX = (centerX - clientX) / 1; // Adjust divisor for sensitivity
-    const deltaY = (centerY - clientY) / 1;
+    const senseitivity = 1;
+    const deltaX = (centerX - clientX) / senseitivity; // Adjust divisor for sensitivity
+    const deltaY = (centerY - clientY) / senseitivity;
 
     container.style.transform = `translate(calc(-50% + ${deltaX}px), calc(-50% + ${deltaY}px))`;
   };

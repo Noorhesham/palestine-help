@@ -10,6 +10,7 @@
   "heroes": "Heroes",
 
   "history": {
+    "title": " WHAT IS THE HISTORY !?",
     "0": {
       "title": "Palestine: Land of Prophets and Sanctities",
       "paragraph": "Palestine is not just a piece of land; it is the home of prophets and the cradle of divine messages. From Jerusalem, where Prophet Muhammad ﷺ ascended to the heavens, to Bethlehem, where Christ was born, the land of Palestine tells sacred stories of human history. For centuries, Palestine has symbolized unity and spirituality, where the spirits of three religions harmoniously intertwine. But this peace, long-lived, is now a memory under the weight of occupation."
@@ -42,5 +43,29 @@
       "title": "A Message to the World: Palestine Calls You",
       "paragraph": "Palestine today is not just the cause of a people living under occupation; it is a test of the world's humanity. The daily oppression faced by Palestinians demands a moral stance from all of us. Palestine must be in our hearts and our actions. Silence in the face of injustice is complicity, and standing with Palestine is standing with truth and justice."
     }
+  },
+  "familyInNeed": {
+    "title": "A Cry for Help",
+    "description": "Hello, my name is Billa, and I am 19 years old from Gaza. I have never asked for help before, but our situation here is beyond bearable. Everything I had has been taken away. I dreamed of a future, studying computer programming and multimedia, but after just two months at university, it was destroyed. Our three homes were bombed, and we have been displaced six times. During this, we’ve been bombed again and again. Now, I’m the one who has to care for my family. We are 10 people, and my father can no longer support us. Prices are too high, and the situation is getting worse. Among us are children who watch bombing and destruction every day. My one-year-old sister was so ill after our house was bombed, she couldn’t walk for a week, and we couldn’t get her the medical help she desperately needed. We are stuck with nothing, in constant danger, and I can only hope that through this fundraiser, we can survive, and maybe, rebuild a small part of our broken lives.",
+    "buttonText": "HELP ME"
+  },
+  "belfor": {
+    "year": "1917",
+    "title": "The Balfour Declaration",
+    "subtitle": "During World War I (1914-1918),",
+    "description": {
+      "part1": "The Ottoman Empire collapsed, and Britain occupied Palestine. The ",
+      "highlight1": "Balfour Declaration",
+      "part2": " of ",
+      "year": "1917",
+      "part3": " endorsed the establishment of a national home for the Jews..."
+    },
+    "footer": "British Foreign Secretary - Arthur Balfour"
+  },
+  "giveup": "Don't give up",
+  "israel": {
+    "label": "The civilization of Israel is built on blood",
+    "altGrave": "grave",
+    "altBuilding": "building"
   }
 }

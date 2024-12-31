@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Label from "./Label";
 import ParagraphWrite from "./ParagraphWrite";
 import gsap from "gsap";
+import { useTranslations } from "next-intl";
 
 const Israel = ({
   history: { paragraph, title },
@@ -11,6 +12,8 @@ const Israel = ({
   history: { paragraph: string; title: string };
   assignAnimations: any;
 }) => {
+  const t = useTranslations("israel");
+
   useEffect(() => {
     if (!assignAnimations) return;
     const ctx = gsap.context(() => {
@@ -30,25 +33,28 @@ const Israel = ({
     });
     return () => ctx.revert();
   }, [assignAnimations]);
+
   return (
-    <section className=" h-screen p flex israel-shit items-center justify-center relative">
-      <div className=" w-full h-44 skulls z-20   absolute bottom-0">
-        <Image src={"/grave.png"} fill className=" object-cover" alt="grave" />
+    <section className="h-screen p flex israel-shit items-center justify-center relative">
+      <div className="w-full h-44 skulls z-20 absolute bottom-0">
+        <Image src="/grave.png" fill className="object-cover" alt={t("altGrave")} />
       </div>
-      <div className=" flex items-center flex-col z-30 gap-4 absolute w-full left-1/2 -translate-x-1/2">
+
+      <div className="flex items-center flex-col z-30 gap-4 absolute w-full left-1/2 -translate-x-1/2">
         <Label
-          className={"   !text-blue-600"}
-          backgroundColor=" bg-transparent"
-          title="حضارة  اسرائيل مبنية علي الدماء"
+          className="!text-blue-600"
+          backgroundColor="bg-transparent"
+          title={t("label")}
         />
         <ParagraphWrite
-          className="israel  relative z-30 max-w-3xl bg-black/40 p-2 !text-center mx-auto mt-4"
+          className="israel relative z-30 max-w-3xl bg-black/40 p-2 !text-center mx-auto mt-4"
           height="h-12"
           text={paragraph}
         />
       </div>
-      <div className=" w-full city h-full absolute inset-0">
-        <Image src={"/building.png"} fill className=" object-cover" alt="grave" />
+
+      <div className="w-full city h-full absolute inset-0">
+        <Image src="/building.png" fill className="object-cover" alt={t("altBuilding")} />
       </div>
     </section>
   );

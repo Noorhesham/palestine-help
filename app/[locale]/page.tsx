@@ -13,6 +13,7 @@ import { useLoader } from "../context/LoaderContext";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/all";
 export const MainContainer = ".main-container";
+
 // روح الروح
 export default function Home() {
   const locale = useLocale();

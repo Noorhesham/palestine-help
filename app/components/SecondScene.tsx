@@ -55,7 +55,7 @@ const SecondScene = ({ text, text2 }: { text: string; text2: string }) => {
           style={{ clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)" }}
           className="nakba w-full rounded-2xl overflow-hidden h-44 lg:h-72   relative"
         >
-          <Image fill src="/nakba.jpg" className=" object-cover" alt="bleed" />
+          <Image fill src="/img2.webp" className=" object-cover" alt="bleed" />
         </div>
       </div>
 
@@ -67,7 +67,7 @@ const SecondScene = ({ text, text2 }: { text: string; text2: string }) => {
             <Image src="/nakba.jpg" className=" object-cover" fill alt="bleed" />
           </div>
           <div className="nakba3 relative translate-y-[100px] rotate-3 rounded-2xl overflow-hidden  w-52 lg:w-96  opacity-0   lg:block hidden left-20    h-72   ">
-            <Image src="/nakba.jpg" className=" object-cover" fill alt="bleed" />
+            <Image src="/death.webp" className=" object-cover" fill alt="bleed" />
           </div>{" "}
         </div>
       </div>
